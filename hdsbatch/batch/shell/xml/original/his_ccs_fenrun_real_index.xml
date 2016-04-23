@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tables xmlns="http://www.ect888.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.ect888.com">
+  <Table Id="his_ccs_fenrun_real_index">
+    <OTSTbName>his_ccs_fenrun_real_index</OTSTbName>
+    <Primarykeys>
+      <Primarykey>
+        <PkName>occur_date</PkName>
+        <PkType>STRING</PkType>
+      </Primarykey>
+	  <Primarykey>
+        <PkName>org_code</PkName>
+        <PkType>STRING</PkType>
+      </Primarykey>
+	  <Primarykey>
+        <PkName>fee_category1</PkName>
+        <PkType>STRING</PkType>
+      </Primarykey>
+	  <Primarykey>
+        <PkName>fee_category2</PkName>
+        <PkType>STRING</PkType>
+      </Primarykey>
+    </Primarykeys>
+    <ReadCU>100</ReadCU>
+    <WriteCU>100</WriteCU>
+  </Table>
+</Tables>

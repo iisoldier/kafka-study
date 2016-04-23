@@ -6,7 +6,7 @@ if [ $# -ne 1 ];then
 fi
 
 run_dt=$1
-exec_dt=$(mysql -N -e "select Min(exec_dt) from para_dtt where state=0")
+exec_dt=$(mysql -N -e "select Min(exec_dt) from dtPara where state=0")
 
 if [ $run_dt = $exec_dt ];then
 	echo "OK, Let's go!"

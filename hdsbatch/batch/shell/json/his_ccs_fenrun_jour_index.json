@@ -18,12 +18,12 @@
                 "accessId": "d5acUDf6Na5MkpuQ",
                 "*accessKey": "NUTTli5EicRL13hkv65jjgKn7FF6A5",
                 "project": "ydt_dat_hds",
-                "table": "f_his_ccs_fee_jour_union",
+                "table": "f_his_ccs_fenrun_jour",
 				
                 "column": [
 				"fee_sn",
-				"occur_date",
-				"org_code",
+				"process_trade_date",
+				"process_taker_code",
 				"fee_category1",
 				"fee_category2",
 				"fee_sn"				
@@ -39,18 +39,18 @@
                 "accessId": "q6iC329hNhDnxQuW",
                 "*accessKey": "2TEP4W1b0ASWqdg7TRDdXjqzV4SE5S",
                 "instanceName": "YDT-DAT-HDS-OTS",
-                "table": "his_ccs_fee_jour_union_occur_index",
+                "table": "his_ccs_fenrun_jour_index",
                 "primaryKey": [
                            {
-                                  "name": "fee_sn"
-                                  "type": "STRING"
-                               },
-						   {
-                                  "name": "occur_date",
+                                  "name": "fee_sn",
                                   "type": "STRING"
                                },
 							   {
-                                  "name": "org_code",
+                                  "name": "process_taker_code",
+                                  "type": "STRING"
+                               },
+							   {
+                                  "name": "process_taker_code",
                                   "type": "STRING"
                                },
 							   {
