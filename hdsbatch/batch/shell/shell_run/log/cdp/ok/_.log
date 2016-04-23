@@ -1,0 +1,7 @@
+运行<Job>命令失败！
+java.lang.NullPointerException
+	at com.alibaba.cdp.console.cmd.JobCmd.renderJob(JobCmd.java:255)
+	at com.alibaba.cdp.console.cmd.JobCmd.buildJob(JobCmd.java:238)
+	at com.alibaba.cdp.console.cmd.JobCmd.doRun(JobCmd.java:199)
+	at com.alibaba.cdp.console.cmd.JobCmd.work(JobCmd.java:386)
+	at com.alibaba.cdp.console.cmd.JobCmd.main(JobCmd.java:436)

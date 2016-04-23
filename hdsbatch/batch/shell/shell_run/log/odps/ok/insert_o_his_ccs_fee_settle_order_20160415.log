@@ -1,0 +1,33 @@
+
+ID = 20160419095856642gsgma15
+Log view:
+http://11.12.3.16:9000/logview/?h=http://service.odps.aliyun-inc.com/api&p=ydt_dat_hds&i=20160419095856642gsgma15&token=ek0wYzRyUnUwRHRadVlzczM0T0M0R2s3Y1o0PSxPRFBTX09CTzoxMDk0NjM1MTM5ODIxMzYwLDE0NjE2NjQ3MzYseyJTdGF0ZW1lbnQiOlt7IkFjdGlvbiI6WyJvZHBzOlJlYWQiXSwiRWZmZWN0IjoiQWxsb3ciLCJSZXNvdXJjZSI6WyJhY3M6b2RwczoqOnByb2plY3RzL3lkdF9kYXRfaGRzL2luc3RhbmNlcy8yMDE2MDQxOTA5NTg1NjY0MmdzZ21hMTUiXX1dLCJWZXJzaW9uIjoiMSJ9
+OK
+
+ID = 20160419095902211gzgma15
+Log view:
+http://11.12.3.16:9000/logview/?h=http://service.odps.aliyun-inc.com/api&p=ydt_dat_hds&i=20160419095902211gzgma15&token=M3c3SUxzb3lhcHdNQzRodm56REVOU1BoRldJPSxPRFBTX09CTzoxMDk0NjM1MTM5ODIxMzYwLDE0NjE2NjQ3NDIseyJTdGF0ZW1lbnQiOlt7IkFjdGlvbiI6WyJvZHBzOlJlYWQiXSwiRWZmZWN0IjoiQWxsb3ciLCJSZXNvdXJjZSI6WyJhY3M6b2RwczoqOnByb2plY3RzL3lkdF9kYXRfaGRzL2luc3RhbmNlcy8yMDE2MDQxOTA5NTkwMjIxMWd6Z21hMTUiXX1dLCJWZXJzaW9uIjoiMSJ9
+OK
+
+ID = 20160419095902554g0hma15
+Log view:
+http://11.12.3.16:9000/logview/?h=http://service.odps.aliyun-inc.com/api&p=ydt_dat_hds&i=20160419095902554g0hma15&token=d3ZOTFlBaDA1WmNodkE1dUJmWHJWbmF3ZUlnPSxPRFBTX09CTzoxMDk0NjM1MTM5ODIxMzYwLDE0NjE2NjQ3NDIseyJTdGF0ZW1lbnQiOlt7IkFjdGlvbiI6WyJvZHBzOlJlYWQiXSwiRWZmZWN0IjoiQWxsb3ciLCJSZXNvdXJjZSI6WyJhY3M6b2RwczoqOnByb2plY3RzL3lkdF9kYXRfaGRzL2luc3RhbmNlcy8yMDE2MDQxOTA5NTkwMjU1NGcwaG1hMTUiXX1dLCJWZXJzaW9uIjoiMSJ9
+Summary:
+resource cost: 0.00 cpu, 0.00 memory
+inputs:
+	ect888_ods_uat1.f_ccs_his_fee_settle_order/dt=20160415: 15 (4256 bytes)
+outputs:
+	ydt_dat_hds.o_his_ccs_fee_settle_order/dt=20160415: 15 (4256 bytes)
+Job run time: 0.000
+Job run mode: service job
+M1_Stg1:
+	instance count: 1
+	run time: 0.000
+	instance time:
+		min: 0.000, max: 0.000, avg: 0.000
+	input records:
+		input: 15  (min: 15, max: 15, avg: 15)
+	output records:
+		M1_Stg1FS_2667619: 15  (min: 15, max: 15, avg: 15)
+
+OK
