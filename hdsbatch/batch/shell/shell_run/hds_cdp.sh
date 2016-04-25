@@ -1,5 +1,5 @@
 #!bin/bash
-now_date=`date +%Y%m%d`
+now_date=`date +%Y%m%d%k%M%S`
 cur_path=`pwd`
 base_path=$(dirname $cur_path)
 o_sql_path="$base_path/insert_sql/o_sql"
@@ -16,18 +16,27 @@ exec_dt=$2
 
 
 
-	echo "${table_name}.json"
+	echo "$开始向表{table_name} 进行cdp任务"
 	sed 's/$date_dt/'$exec_dt'/g' $json_path/${table_name}.json >run/${table_name}.json
-	cdp job -start -p $pipeline_name -f run/${table_name}.json >log/cdp/${table_name}_${exec_dt}.log 2>&1
+	cdp job -start -p $pipeline_name -f run/${table_name}.json 2>&1 >log/cdp/${table_name}_${exec_dt}_${now_date}.log 
+	ret=$?
+	if [ ret -ne 0 ];then
+		echo "cdp 任务失败!向表{table_name}中传输数据失败...详情请查看日志"
+		exit 1
+	fi
 	rm -r run/${table_name}.json
 
 
-
-	echo "${table_name}_index.json"
+	echo "$开始向表{table_name}_index 进行cdp任务"
 	sed 's/$date_dt/'$exec_dt'/g' $json_path/${table_name}_index.json >run/${table_name}_index.json
-	cdp job -start -p $pipeline_name -f run/${table_name}_index.json >log/cdp/${table_name}_index_${exec_dt}.log 2>&1
+	cdp job -start -p $pipeline_name -f run/${table_name}_index.json 2>&1 >log/cdp/${table_name}_index_${exec_dt}_${now_date}.log 
+	ret_index=$?
+	if [ ret_index -ne 0 ];then
+		echo "cdp 任务失败!向表{table_name}_index中传输数据失败...详情请查看日志"
+		exit 1
+	fi
 	rm -r run/${table_name}_index.json
 
 	
 mv log/cdp/*.log log/cdp/ok
-echo "success!!!"
+echo "cdp job success!!!"
