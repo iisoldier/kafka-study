@@ -29,7 +29,7 @@
 				"order_sn"				
                            
                 ],
-				"partition": "dt=20160406"
+				"partition": "dt='$date_dt'"
             }
         },
         "writer": {
