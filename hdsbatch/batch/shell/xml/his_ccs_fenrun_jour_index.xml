@@ -4,6 +4,10 @@ xsi:schemaLocation="http://www.ect888.com">
   <Table Id="his_ccs_fenrun_jour_index">
     <OTSTbName>his_ccs_fenrun_jour_index</OTSTbName>
     <Primarykeys>
+	  <Primarykey>
+        <PkName>fee_sn</PkName>
+        <PkType>STRING</PkType>
+      </Primarykey>
       <Primarykey>
         <PkName>occur_date</PkName>
         <PkType>STRING</PkType>

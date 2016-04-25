@@ -5,6 +5,10 @@ xsi:schemaLocation="http://www.ect888.com">
     <OTSTbName>his_ccs_fee_settle_order_index</OTSTbName>
     <Primarykeys>
       <Primarykey>
+        <PkName>order_sn</PkName>
+        <PkType>STRING</PkType>
+      </Primarykey>
+	  <Primarykey>
         <PkName>occur_date</PkName>
         <PkType>STRING</PkType>
       </Primarykey>
