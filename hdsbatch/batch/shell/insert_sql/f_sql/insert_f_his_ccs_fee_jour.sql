@@ -39,4 +39,4 @@
 
 	from 
 	 o_his_ccs_fee_jour
-	where dt = '$date_dt';
+	where dt = 'dtonly';

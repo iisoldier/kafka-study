@@ -33,4 +33,4 @@
 		detail_no       
 	from 
 	 o_his_ccs_fenrun_jour
-	where dt = '$date_dt';
+	where dt = 'dtonly';

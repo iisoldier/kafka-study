@@ -38,4 +38,4 @@
 		
 	from 
 	 o_his_ccs_fee_settle_order
-	where dt = '$date_dt';
+	where dt = 'dtonly';

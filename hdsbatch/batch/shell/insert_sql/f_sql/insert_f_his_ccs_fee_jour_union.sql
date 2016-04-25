@@ -166,4 +166,4 @@
 		
 	from 
 	 o_his_ccs_fee_jour_union
-	where dt = '$date_dt';
+	where dt = 'dtonly';

@@ -127,4 +127,4 @@
 		fenrun_detail_no       
 	from 
 	 o_his_ccs_fee_real_union
-	where dt = '$date_dt';
+	where dt = 'dtonly';
