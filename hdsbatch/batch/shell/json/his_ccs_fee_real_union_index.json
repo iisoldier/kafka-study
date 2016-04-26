@@ -46,7 +46,7 @@
                                   "type": "STRING"
                                },
 							   {
-                                  "name": "process_taker_code",
+                                  "name": "process_trade_date",
                                   "type": "STRING"
                                },
 							   {

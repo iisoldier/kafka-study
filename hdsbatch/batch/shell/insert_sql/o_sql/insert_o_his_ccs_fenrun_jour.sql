@@ -29,9 +29,7 @@
 		create_date     , 
 		result_code     , 
 		result_info     ,
-		detail_no       
-		
-		
+		detail_no       				
 	from 
 	 ect888_ods_uat1.f_ccs_his_fenrun_jour 
-	where a.dt = '$date_dt' ;
+	where dt = '$date_dt' ;

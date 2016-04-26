@@ -17,7 +17,7 @@ clean_dt=`date -d "$exec_dt -1 month" +"%Y%m%d"`
 
 
 	
-	echo "Ö´ĞĞ insert_o_${table_name}.sql"
+	echo "æ‰§è¡Œ insert_o_${table_name}.sql"
 	if [ ! -f $o_sql_path/insert_o_${table_name}.sql ];then
 	        echo "insert_o_${table_name}.sql does not exist..."
 	        exit 1
@@ -26,7 +26,7 @@ clean_dt=`date -d "$exec_dt -1 month" +"%Y%m%d"`
 	odpscmd --project $hds_project -f run/insert_o_${table_name}.sql 2>&1  >log/odps/insert_o_${table_name}_${exec_dt}_${now_date}.log
 	reto=$?
 	if [ reto -ne 0 ];then
-		echo "odps Ö´ĞĞ insert_o_${table_name}.sqlÈÎÎñÊ§°Ü£¡ÏêÇéÇë²é¿´ÈÕÖ¾"
+		echo "odps æ‰§è¡Œ insert_o_${table_name}.sqlä»»åŠ¡å¤±è´¥ï¼è¯¦æƒ…è¯·æŸ¥çœ‹æ—¥å¿—"
 		exit 1
 	fi
 	rm -r run/insert_o_${table_name}.sql 
@@ -34,7 +34,7 @@ clean_dt=`date -d "$exec_dt -1 month" +"%Y%m%d"`
 
 
 	
-	echo "Ö´ĞĞinsert_f_${table_name}.sql"
+	echo "æ‰§è¡Œinsert_f_${table_name}.sql"
 	if [ ! -f $f_sql_path/insert_f_${table_name}.sql ];then
 	        echo "insert_f_${table_name}.sql does not exist..."
 	        exit 1
@@ -44,15 +44,15 @@ clean_dt=`date -d "$exec_dt -1 month" +"%Y%m%d"`
 	odpscmd --project $hds_project -f run/insert_f_${table_name}.sql 2>&1 > log/odps/insert_f_${table_name}_${exec_dt}_${now_date}.log
 	retf=$?
 	if [ retf -ne 0 ];then
-		echo "odps Ö´ĞĞ insert_o_${table_name}.sqlÈÎÎñÊ§°Ü£¡ÏêÇéÇë²é¿´ÈÕÖ¾"
+		echo "odps æ‰§è¡Œ insert_o_${table_name}.sqlä»»åŠ¡å¤±è´¥ï¼è¯¦æƒ…è¯·æŸ¥çœ‹æ—¥å¿—"
 		exit 1
 	fi
-	#### É¾³ı30ÌìÇ°·ÖÇø
-	echo "F²ã É¾³ı30ÌìÇ°·ÖÇø"
+	#### åˆ é™¤30å¤©å‰åˆ†åŒº
+	echo "Få±‚ åˆ é™¤30å¤©å‰åˆ†åŒº"
 	odpscmd --project $hds_project -e "alter table  f_${table_name} drop if     exists partition (dt = '$clean_dt');" 2>&1 > log/odps/delete_f_${table_name}_${exec_dt}_${now_date}.log 
 	ret=$?
 	if [ ret -ne 0 ];then
-		echo "É¾³ı30ÌìÇ°·ÖÇøÈÎÎñÊ§°Ü£¡ÏêÇéÇë²é¿´ÈÕÖ¾"
+		echo "åˆ é™¤30å¤©å‰åˆ†åŒºä»»åŠ¡å¤±è´¥ï¼è¯¦æƒ…è¯·æŸ¥çœ‹æ—¥å¿—"
 		exit 1
 	fi
 	rm -r run/insert_f_${table_name}.sql

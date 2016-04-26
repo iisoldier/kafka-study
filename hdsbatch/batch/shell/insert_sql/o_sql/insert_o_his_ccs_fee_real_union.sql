@@ -128,5 +128,5 @@
 		
 		
 	from 
-	 ect888_ods_uat1.f_ccs_fee_jour_real a left outer join ect888_ods_uat1.f_ccs_fee_trade_core_process_real b on a.serial_no=b.process_id left outer join ect888_ods_uat1.f_ccs_fee_trade_core_real c on b.fee_trade_sn=c.fee_trade_sn left outer join ect888_ods_uat1.f_ccs_fenrun_jour_real d on a.serial_no= d.serial_no
-	where a.dt = '$date_dt' ;
+	 ect888_ods_uat1.f_ccs_fee_jour_real a  left outer join	ect888_ods_uat1.f_ccs_fee_trade_core_process_real b on a.serial_no=b.process_id left outer join ect888_ods_uat1.f_ccs_fee_trade_core_real c  on b.fee_trade_sn=c.fee_trade_sn left outer join  ect888_ods_uat1.f_ccs_fenrun_jour_real d on a.serial_no= d.serial_no 
+	where a.dt = '$date_dt' and b.dt = '$date_dt' and c.dt = '$date_dt' and d.dt = '$date_dt';

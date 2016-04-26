@@ -29,7 +29,7 @@
 				"fee_sn"				
                            
                 ],
-				"partition": "dt='$date_dt"
+				"partition": "dt='$date_dt'"
             }
         },
         "writer": {
@@ -41,11 +41,11 @@
                 "instanceName": "YDT-DAT-HDS-OTS",
                 "table": "his_ccs_fee_jour_index",
                 "primaryKey": [
+				{
+				"name":"fee_sn",
+				"type":"STRING"
+				},
                            {
-                                  "name": "fee_sn"
-                                  "type": "STRING"
-                               },
-						   {
                                   "name": "occur_date",
                                   "type": "STRING"
                                },
@@ -64,7 +64,7 @@
                             ],
                         "column": [
                              {
-                               "name": "index_fee_sn",
+                               "name": "index_order_sn",
                                "type": "STRING"
                              }                         
                             ],

@@ -72,8 +72,7 @@
 							
 							
 
-							{"name":"fee_sn" , 
-							"type": "STRING"  },
+							
 							{"name":"fee_id" , 
 							"type": "STRING"  },
 							{"name":"fee_name" , 

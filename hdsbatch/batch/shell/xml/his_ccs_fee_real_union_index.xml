@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Tables xmlns="http://www.ect888.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.ect888.com">
-  <Table Id="his_ccs_fee_real_union_trade_index">
-    <OTSTbName>his_ccs_fee_real_union_trade_index</OTSTbName>
+  <Table Id="his_ccs_fee_real_union_index">
+    <OTSTbName>his_ccs_fee_real_union_index</OTSTbName>
     <Primarykeys>
       <Primarykey>
         <PkName>fee_sn</PkName>

@@ -22,8 +22,8 @@
 				
                 "column": [
 				"fee_sn",
-				"process_trade_date",
-				"process_taker_code",
+				"occur_date",
+				"org_code",
 				"fee_category1",
 				"fee_category2",
 				"fee_sn"				
@@ -46,11 +46,11 @@
                                   "type": "STRING"
                                },
 							   {
-                                  "name": "process_taker_code",
+                                  "name": "occur_date",
                                   "type": "STRING"
                                },
 							   {
-                                  "name": "process_taker_code",
+                                  "name": "org_code",
                                   "type": "STRING"
                                },
 							   {

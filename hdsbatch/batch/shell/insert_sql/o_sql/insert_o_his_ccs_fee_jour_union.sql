@@ -102,70 +102,13 @@
 		c.tohis_date       ,                                                         
 		c.order_by_no      ,                                                        
 		c.detail_no        ,                                                         
-		c.orig_detail_no   ,
+		c.orig_detail_no   
 		
 		
-		d.process_id 		,
-		d.fee_trade_sn 		,
-		d.fee_id 			,
-		d.fee_category1 		,
-		d.fee_category2 		,
-		d.fee_org_code 		,
-		d.taker_code 		,
-		d.transferee_code 	,
-		d.transferor_code 	,
-		d.trade_amount 		,
-		d.currency 			,
-		d.trade_date 		,
-		d.trade_time 		,
-		d.account_type 		,
-		d.detail_type 		,
-		d.compute_status 	,
-		d.include_count_favorable ,
-		d.input_date 		,
-		d.input_time 		,
-		d.remark 			,
-		d.reserve1 			,
-		d.reserve2 			,
-		d.tohis_date 		,
-		d.channel_serial_no 	,
-		d.order_by_no 		,
-		d.multitem_flag 		,
 		
-		e.fee_trade_sn     ,                                                         
-		e.data_from        ,                                                         
-		e.fee_category1    ,                                                         
-		e.fee_category2    ,                                                         
-		e.biz_serial_no    ,                                                         
-		e.channel_serial_no  ,                                                         
-		e.currency         ,                                                         
-		e.trade_amount     ,                                                        
-		e.trade_date       ,                                                         
-		e.trade_time       ,                                                         
-		e.taker            ,                                                         
-		e.taker_code       ,                                                         
-		e.taker_sub        ,                                                         
-		e.transferee       ,                                                         
-		e.transferee_code  ,                                                         
-		e.transferee_sub   ,                                                         
-		e.transferor       ,                                                         
-		e.transferor_code  ,                                                      
-		e.transferor_sub   ,                                                         
-		e.record_status    ,                                                         
-		e.trade_type_status  ,                                                         
-		e.account_no       ,                                                         
-		e.account_type     ,                                                         
-		e.detail_type      ,                                                         
-		e.compute_status   ,                                                         
-		e.remark           ,                                                         
-		e.reserve1         ,                                                         
-		e.reserve2         ,                                                         
-		e.collect_date     ,                                                         
-		e.tohis_date       ,                                                         
-		e.order_by_no      
 
 		
 	from 
-	 ect888_ods_uat1.f_ccs_his_fee_jour a left outer join ect888_ods_uat1.f_ccs_his_fee_trade_core_process b on  a.serial_no=b.process_id left outer join ect888_ods_uat1.f_ccs_his_fee_trade_core c on b.fee_trade_sn=c.fee_trade_sn left outer join ect888_ods_uat1.f_ccs_his_fee_trade_credit_process  d on a.serial_no =d.process_id left outer join ect888_ods_uat1.f_ccs_his_fee_trade_credit e on d.fee_trade_sn = e.fee_trade_sn 
+	 ect888_ods_uat1.f_ccs_his_fee_jour a  left outer join ect888_ods_uat1.f_ccs_his_fee_trade_core_process b on  a.serial_no=b.process_id  left outer join ect888_ods_uat1.f_ccs_his_fee_trade_core c on b.fee_trade_sn=c.fee_trade_sn 
 
-	where a.dt = '$date_dt';
+	where a.dt = '$date_dt'and b.dt = '$date_dt'and c.dt = '$date_dt';

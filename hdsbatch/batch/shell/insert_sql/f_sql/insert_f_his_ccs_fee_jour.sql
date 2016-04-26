@@ -12,7 +12,7 @@
 		serial_no           ,
 		case when fee_category1 is null then '' else fee_category1 end,
 		case when fee_category2 is null then '' else fee_category2 end,		
-		case when length(trim(occur_date))==10 then concat(concat(substr(occur_date,1,4),substr(occur_date,6,2)),substr(occur_date,9,2)) else occur_date end,
+		case when length(trim(occur_date))==10 then concat(concat(substr(occur_date,1,4),substr(occur_date,6,2)),substr(occur_date,9,2)) when occur_date is null then '' else occur_date end,
 		case when org_code is null then '' else org_code end,		
 		org_name            ,
 		user_id             ,

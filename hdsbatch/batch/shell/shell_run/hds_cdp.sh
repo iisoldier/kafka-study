@@ -16,23 +16,23 @@ exec_dt=$2
 
 
 
-	echo "$¿ªÊ¼Ïò±í{table_name} ½øĞĞcdpÈÎÎñ"
+	echo "$å¼€å§‹å‘è¡¨{table_name} è¿›è¡Œcdpä»»åŠ¡"
 	sed 's/$date_dt/'$exec_dt'/g' $json_path/${table_name}.json >run/${table_name}.json
 	cdp job -start -p $pipeline_name -f run/${table_name}.json 2>&1 >log/cdp/${table_name}_${exec_dt}_${now_date}.log 
 	ret=$?
 	if [ ret -ne 0 ];then
-		echo "cdp ÈÎÎñÊ§°Ü!Ïò±í{table_name}ÖĞ´«ÊäÊı¾İÊ§°Ü...ÏêÇéÇë²é¿´ÈÕÖ¾"
+		echo "cdp ä»»åŠ¡å¤±è´¥!å‘è¡¨{table_name}ä¸­ä¼ è¾“æ•°æ®å¤±è´¥...è¯¦æƒ…è¯·æŸ¥çœ‹æ—¥å¿—"
 		exit 1
 	fi
 	rm -r run/${table_name}.json
 
 
-	echo "$¿ªÊ¼Ïò±í{table_name}_index ½øĞĞcdpÈÎÎñ"
+	echo "$å¼€å§‹å‘è¡¨{table_name}_index è¿›è¡Œcdpä»»åŠ¡"
 	sed 's/$date_dt/'$exec_dt'/g' $json_path/${table_name}_index.json >run/${table_name}_index.json
 	cdp job -start -p $pipeline_name -f run/${table_name}_index.json 2>&1 >log/cdp/${table_name}_index_${exec_dt}_${now_date}.log 
 	ret_index=$?
 	if [ ret_index -ne 0 ];then
-		echo "cdp ÈÎÎñÊ§°Ü!Ïò±í{table_name}_indexÖĞ´«ÊäÊı¾İÊ§°Ü...ÏêÇéÇë²é¿´ÈÕÖ¾"
+		echo "cdp ä»»åŠ¡å¤±è´¥!å‘è¡¨{table_name}_indexä¸­ä¼ è¾“æ•°æ®å¤±è´¥...è¯¦æƒ…è¯·æŸ¥çœ‹æ—¥å¿—"
 		exit 1
 	fi
 	rm -r run/${table_name}_index.json
