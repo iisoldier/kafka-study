@@ -33,25 +33,15 @@ public class OTSConstant {
 		public static String FeeJourDetail ="fee_sn,fee_id,fee_name,fee_type_flag,serial_no,"
 				+ "fee_category1,fee_category2,occur_date,org_code,org_name,user_id,user_name,currency,occur_amount,"
 				+ "standard_fare,fee_amount,favorable_amount,fee_cycle_id,fee_detail_id,create_type,last_update_date,last_update_time,gather_flag,"
-				+ "need_gather,result_code,result_info,tohis_date,channel_serial_no,create_date,fees_base_type,detail_no";
+				+ "need_gather,result_code,result_info,channel_serial_no,create_date,fees_base_type,detail_no";
 	
 		//分润明细明细字段 jinmeng
-				public static String FenrunJourRealDetailDetail ="fenrun_fee_sn,fenrun_fee_id,fenrun_fee_name,"
-		+"fenrun_fee_type_flag,fenrun_serial_no,fenrun_fee_category1,fenrun_fee_category2,"
-		+"fenrun_occur_date,fenrun_org_code,fenrun_org_name,fenrun_currency,fenrun_fee_amount,fenrun_fee_cycle_id,fenrun_fee_detail_id,"
-		+"fenrun_create_type,fenrun_last_update_date,fenrun_last_update_time,fenrun_gather_flag,fenrun_need_gather,fenrun_channel_serial_no,"
-		+"fenrun_create_date,fenrun_result_code,fenrun_result_info,fenrun_detail_no,fee_sn,fee_id,fee_name,fee_type_flag,serial_no,fee_category1,"
-		+"fee_category2,occur_date,org_code,org_name,user_id,user_name,currency,occur_amount,standard_fare,fee_amount,favorable_amount,fee_cycle_id,"
-		+"fee_detail_id,create_type,last_update_date,last_update_time,gather_flag,need_gather,result_code,result_info,channel_serial_no,create_date,"
-		+"fees_base_type,detail_no,process_process_id,process_fee_trade_sn,process_fee_id,process_fee_category1,process_fee_category2,process_fee_org_code,"
-		+"process_taker_code,process_transferee_code,process_transferor_code,process_trade_amount,process_currency,process_trade_date,process_trade_time,"
-		+"process_compute_status,process_include_count_favorable,process_input_date,process_input_time,process_remark,process_reserve1,process_reserve2,"
-		+"process_trading_channel,process_channel_serial_no,process_order_by_no,process_multitem_flag,process_detail_no,core_fee_trade_sn,core_fee_category1,"
-		+"core_fee_category2,core_busi_type,core_busi_mark,core_msg_no,core_biz_serial_no,core_channel_serial_no,core_currency,core_trade_amount,"
-		+"core_trade_date,core_trade_time,core_taker,core_taker_code,core_taker_sub,core_transferee,core_transferee_code,core_transferee_sub,"
-		+"core_transferor,core_transferor_code,core_transferor_sub,core_record_status,core_trade_type_status,core_compute_status,core_remark,core_reserve1,"
-		+"core_reserve2,core_merchants_type,core_trading_channel,core_collect_date,core_orig_busi_type,core_orig_busi_mark,core_orig_msg_no,core_orig_biz_serial_no,"
-		+"core_orig_taker_code,core_collect_status,core_order_by_no,core_detail_no,core_orig_detail_no";
+				public static String FenrunJourRealDetailDetail ="core_busi_type,core_busi_mark,core_msg_no,core_biz_serial_no,"
+						+"core_channel_serial_no,fenrun_fee_category1,fenrun_fee_category2,"
+						+"core_detail_no,core_trade_date,core_taker_code,core_transferee_code,"
+						+"core_transferor_code,fenrun_currency,core_orig_busi_type,core_orig_busi_mark,"
+						+"core_orig_msg_no,core_orig_biz_serial_no,core_orig_taker_code,fenrun_org_code,"
+						+"fenrun_org_name,fenrun_fee_amount,fenrun_result_code,fenrun_occur_date";
 		//指令划付流水索引字段
 		public static String FeeSettleOrderIndex="index_order_sn";
 		//分润流水索引字段

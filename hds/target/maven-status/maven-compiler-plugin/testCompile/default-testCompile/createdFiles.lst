@@ -1,0 +1,6 @@
+test\hds\ValidateTest.class
+examples\OTSMultiDataSample.class
+test\hds\DateUtilTest.class
+test\hds\Record.class
+test\hds\BaseTest.class
+examples\OTSMultiTableOperationSample.class
