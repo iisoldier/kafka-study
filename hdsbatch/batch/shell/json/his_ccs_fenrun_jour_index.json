@@ -21,11 +21,12 @@
                 "table": "f_his_ccs_fenrun_jour",
 				
                 "column": [
-				"fee_sn",
+				
 				"occur_date",
 				"org_code",
 				"fee_category1",
 				"fee_category2",
+				"fee_sn",
 				"fee_sn"				
                            
                 ],
@@ -41,10 +42,7 @@
                 "instanceName": "YDT-DAT-HDS-OTS",
                 "table": "his_ccs_fenrun_jour_index",
                 "primaryKey": [
-                           {
-                                  "name": "fee_sn",
-                                  "type": "STRING"
-                               },
+                          
 							   {
                                   "name": "occur_date",
                                   "type": "STRING"
@@ -59,6 +57,10 @@
                                },
 							   {
                                   "name": "fee_category2",
+                                  "type": "STRING"
+                               },
+							    {
+                                  "name": "fee_sn",
                                   "type": "STRING"
                                }
                             ],
