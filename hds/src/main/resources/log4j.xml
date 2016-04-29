@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE   log4j:configuration   SYSTEM   "log4j.dtd">
+<!-- 
+#
+# Log4J Settings for log4j 1.2.x (via jakarta-commons-logging)
+#
+# The five logging levels used by Log are (in order):
+#
+#   1. DEBUG (the least serious)
+#   2. INFO
+#   3. WARN
+#   4. ERROR
+#   5. FATAL (the most serious)
+ -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<param name="encoding" value="gbk"/>
+		 <param name="target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout" >
+				<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n" />
+		</layout>
+	     <filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMax" value="ERROR" />
+			<param name="LevelMin" value="WARN" />
+		</filter>
+	</appender>
+	
+	<!--  <appender name="ERROR" class="org.apache.log4j.DailyRollingFileAppender">-->
+	<appender name="ERROR" class="com.hds.api.common.util.DailyRollingFileAppender">
+		<!--  <param name="File" value="d:\\logs\\error-log.log" />-->
+		<param name="File" value="/ztsoft/usr/wasadm/logs/error-log.log" />
+		<param name="Append" value="true" />
+		<param name="encoding" value="gbk"/>
+		<param name="MaxFileSize" value="5MB"></param>  
+        <param name="MaxBackupIndex" value="100"></param> 
+		<param name="DatePattern" value="yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout" >
+				<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMax" value="ERROR" />
+			<param name="LevelMin" value="WARN" />
+			 <param name="AcceptOnMatch" value="true" /> 
+		</filter>
+	</appender>
+	
+    <!--  <appender name="INFO" class="org.apache.log4j.DailyRollingFileAppender">-->
+	<appender name="INFO" class="com.hds.api.common.util.DailyRollingFileAppender">
+	<!--  	<param name="File" value="d:\\logs\\info-log.log" />-->
+		<param name="File" value="/ztsoft/usr/wasadm/logs/info-log.log" />
+		<param name="Append" value="true" />
+		<param name="encoding" value="gbk"/>
+		<param name="MaxFileSize" value="5MB"></param>  
+        <param name="MaxBackupIndex" value="100"></param> 
+		<param name="DatePattern" value="yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout" >
+				<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMax" value="INFO" />
+			<param name="LevelMin" value="INFO" />
+			 <param name="AcceptOnMatch" value="true" /> 
+		</filter>
+	</appender>
+	
+	<!--  <appender name="DEBUG" class="org.apache.log4j.DailyRollingFileAppender">-->
+    <appender name="DEBUG" class="com.hds.api.common.util.DailyRollingFileAppender">
+		<!--<param name="File" value="d:\\logs\\error-log.log" />-->
+		<param name="File" value="/ztsoft/usr/wasadm/logs/debug-log.log" />
+		<param name="Append" value="true" />
+		<param name="encoding" value="gbk"/>
+		<param name="MaxFileSize" value="5MB"></param>  
+        <param name="MaxBackupIndex" value="100"></param> 
+        <param name="MaxBackupIndex" value="5" /> 
+        
+		<param name="DatePattern" value="yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout" >
+				<param name="ConversionPattern" value="%d %-5p %c{2} - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMax" value="INFO" />
+			<param name="LevelMin" value="DEBUG" />
+			 <param name="AcceptOnMatch" value="true" /> 
+		</filter>
+	</appender>
+	
+	
+	<root>
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="INFO" />
+		<appender-ref ref="ERROR" />
+		<appender-ref ref="DEBUG" />
+	</root>
+</log4j:configuration> 
