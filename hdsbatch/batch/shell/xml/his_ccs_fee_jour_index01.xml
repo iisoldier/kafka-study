@@ -5,10 +5,7 @@ xsi:schemaLocation="http://www.ect888.com">
     <OTSTbName>his_ccs_fee_jour_index01</OTSTbName>
     <Primarykeys>
       
-	  <Primarykey>
-        <PkName>occur_date</PkName>
-        <PkType>STRING</PkType>
-      </Primarykey>
+
 	  <Primarykey>
         <PkName>org_code</PkName>
         <PkType>STRING</PkType>
@@ -19,6 +16,10 @@ xsi:schemaLocation="http://www.ect888.com">
       </Primarykey>
 	  <Primarykey>
         <PkName>fee_category2</PkName>
+        <PkType>STRING</PkType>
+      </Primarykey>
+	  <Primarykey>
+        <PkName>occur_date</PkName>
         <PkType>STRING</PkType>
       </Primarykey>
 	  <Primarykey>

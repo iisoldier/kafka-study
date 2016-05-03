@@ -9,7 +9,7 @@ xsi:schemaLocation="http://www.ect888.com">
         <PkType>STRING</PkType>
       </Primarykey>
     </Primarykeys>
-    <ReadCU>100</ReadCU>
-    <WriteCU>100</WriteCU>
+    <ReadCU>20000</ReadCU>
+    <WriteCU>20000</WriteCU>
   </Table>
 </Tables>

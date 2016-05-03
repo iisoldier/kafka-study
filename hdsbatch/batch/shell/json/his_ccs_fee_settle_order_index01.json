@@ -22,10 +22,12 @@
 				
                 "column": [
 				
-				"occur_date",
-				"deal_state",
+				
+				
 				"debit_org_code",
 				"credit_org_code",
+				"deal_state",
+				"occur_date",
 				"order_sn",
 				"order_sn"				
                            
@@ -42,15 +44,7 @@
                 "instanceName": "YDT-DAT-HDS-OTS",
                 "table": "his_ccs_fee_settle_order_index01",
                 "primaryKey": [
-				
-                           {
-                                  "name": "occur_date",
-                                  "type": "STRING"
-                               },
-							   {
-                                  "name": "deal_state",
-                                  "type": "STRING"
-                               },
+		   
 							   {
                                   "name": "debit_org_code",
                                   "type": "STRING"
@@ -59,7 +53,14 @@
                                   "name": "credit_org_code",
                                   "type": "STRING"
                                },
-							   
+							   {
+                                  "name": "deal_state",
+                                  "type": "STRING"
+                               },
+							   {
+                                  "name": "occur_date",
+                                  "type": "STRING"
+                               },
 							   {
 								"name":"order_sn",
 								"type":"STRING"

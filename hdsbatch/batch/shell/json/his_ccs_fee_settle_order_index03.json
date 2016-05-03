@@ -18,20 +18,18 @@
                 "accessId": "d5acUDf6Na5MkpuQ",
                 "*accessKey": "NUTTli5EicRL13hkv65jjgKn7FF6A5",
                 "project": "ydt_dat_hds",
-                "table": "f_his_ccs_fee_jour_detail",
+                "table": "f_his_ccs_fee_settle_order",
 				
                 "column": [
 				
-				
-				"core_taker_code",
-				"fee_category1",
-				"fee_category2",
-				"core_trade_date",
-				"fee_sn",
-				"fee_sn"				
+				"credit_org_code",
+				"deal_state",
+				"occur_date",
+				"order_sn",
+				"order_sn"				
                            
                 ],
-				"partition": "dt='$date_dt"
+				"partition": "dt='$date_dt'"
             }
         },
         "writer": {
@@ -41,35 +39,29 @@
                 "accessId": "q6iC329hNhDnxQuW",
                 "*accessKey": "2TEP4W1b0ASWqdg7TRDdXjqzV4SE5S",
                 "instanceName": "YDT-DAT-HDS-OTS",
-                "table": "his_ccs_fee_jour_detail_index01",
+                "table": "his_ccs_fee_settle_order_index03",
                 "primaryKey": [
-                           
-							   
+		   
 							   {
-                                  "name": "core_taker_code",
+                                  "name": "credit_org_code",
                                   "type": "STRING"
                                },
 							   {
-                                  "name": "fee_category1",
-                                  "type": "STRING"
-                               },
-							   
-							   {
-                                  "name": "fee_category2",
+                                  "name": "deal_state",
                                   "type": "STRING"
                                },
 							   {
-                                  "name": "core_trade_date",
+                                  "name": "occur_date",
                                   "type": "STRING"
                                },
 							   {
-                                  "name": "fee_sn",
-                                  "type": "STRING"
-                               }
+								"name":"order_sn",
+								"type":"STRING"
+								}
                             ],
                         "column": [
                              {
-                               "name": "index_fee_sn",
+                               "name": "index_order_sn",
                                "type": "STRING"
                              }                         
                             ],

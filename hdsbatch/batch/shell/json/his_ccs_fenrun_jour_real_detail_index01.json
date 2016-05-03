@@ -22,10 +22,11 @@
 				
                 "column": [
 				
-				"core_trade_date",
+				
 				"core_taker_code",
 				"fee_category1",
 				"fee_category2",
+				"core_trade_date",
 				"fenrun_fee_sn",
 				"fenrun_fee_sn"				
                            
@@ -43,10 +44,7 @@
                 "table": "his_ccs_fenrun_jour_real_detail_index01",
                 "primaryKey": [
                            
-							   {
-                                  "name": "core_trade_date",
-                                  "type": "STRING"
-                               },
+							   
 							   {
                                   "name": "core_taker_code",
                                   "type": "STRING"
@@ -57,6 +55,10 @@
                                },
 							   {
                                   "name": "fee_category2",
+                                  "type": "STRING"
+                               },
+							   {
+                                  "name": "core_trade_date",
                                   "type": "STRING"
                                },
 							   {

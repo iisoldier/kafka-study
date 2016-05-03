@@ -5,10 +5,7 @@ xsi:schemaLocation="http://www.ect888.com">
     <OTSTbName>his_ccs_fenrun_jour_real_detail_index01</OTSTbName>
     <Primarykeys>
       
-	  <Primarykey>
-        <PkName>core_trade_date</PkName>
-        <PkType>STRING</PkType>
-      </Primarykey>
+
 	  <Primarykey>
         <PkName>core_taker_code</PkName>
         <PkType>STRING</PkType>
@@ -21,6 +18,10 @@ xsi:schemaLocation="http://www.ect888.com">
         <PkName>fee_category2</PkName>
         <PkType>STRING</PkType>
       </Primarykey>
+	  <Primarykey>
+        <PkName>core_trade_date</PkName>
+        <PkType>STRING</PkType>
+      </Primarykey>	  
 	  <Primarykey>
         <PkName>fenrun_fee_sn</PkName>
         <PkType>STRING</PkType>

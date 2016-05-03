@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Tables xmlns="http://www.ect888.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.ect888.com">
-  <Table Id="his_ccs_fee_settle_order_index01">
-    <OTSTbName>his_ccs_fee_settle_order_index01</OTSTbName>
+  <Table Id="his_ccs_fee_settle_order_index02">
+    <OTSTbName>his_ccs_fee_settle_order_index02</OTSTbName>
     <Primarykeys>	  
 	  <Primarykey>
         <PkName>debit_org_code</PkName>
-        <PkType>STRING</PkType>
-      </Primarykey>
-	  <Primarykey>
-        <PkName>credit_org_code</PkName>
         <PkType>STRING</PkType>
       </Primarykey>
 	  <Primarykey>

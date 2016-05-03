@@ -22,10 +22,11 @@
 				
                 "column": [
 				
-				"occur_date",
+				
 				"org_code",
 				"fee_category1",
 				"fee_category2",
+				"occur_date",
 				"fee_sn",
 				"fee_sn"				
                            
@@ -43,10 +44,7 @@
                 "table": "his_ccs_fenrun_jour_index01",
                 "primaryKey": [
                           
-							   {
-                                  "name": "occur_date",
-                                  "type": "STRING"
-                               },
+							   
 							   {
                                   "name": "org_code",
                                   "type": "STRING"
@@ -57,6 +55,10 @@
                                },
 							   {
                                   "name": "fee_category2",
+                                  "type": "STRING"
+                               },
+							   {
+                                  "name": "occur_date",
                                   "type": "STRING"
                                },
 							    {
