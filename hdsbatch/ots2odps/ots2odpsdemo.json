@@ -1,0 +1,164 @@
+{
+	"type": "job",
+	"traceId": "ots2odps_test000",
+	"version": "1.0",
+	"configuration": {
+		"reader": {
+			"plugin": "ots",
+			"parameter": {
+				"endpoint": "http://YDT-DAT-HDS-OTS.cn-shanghai-zty-d01.ots.dcp.dev.ect-it.com",
+				"accessId": "q6iC329hNhDnxQuW",
+				"*accessKey": "2TEP4W1b0ASWqdg7TRDdXjqzV4SE5S",
+				"instanceName": "YDT-DAT-HDS-OTS",
+				"table": "his_ccs_fee_jour",
+				"column": [{
+					"name": "fee_sn"
+				},
+				{
+					"name": "fee_id"
+				},
+				{
+					"name": "fee_name"
+				},
+				{
+					"name": "fee_type_flag"
+				},
+				{
+					"name": "serial_no"
+				},
+				{
+					"name": "fee_category1"
+				},
+				{
+					"name": "fee_category2"
+				},
+				{
+					"name": "occur_date"
+				},
+				{
+					"name": "org_code"
+				},
+				{
+					"name": "org_name"
+				},
+				{
+					"name": "user_id"
+				},
+				{
+					"name": "user_name"
+				},
+				{
+					"name": "currency"
+				},
+				{
+					"name": "occur_amount"
+				},
+				{
+					"name": "standard_fare"
+				},
+				{
+					"name": "fee_amount"
+				},
+				{
+					"name": "favorable_amount"
+				},
+				{
+					"name": "fee_cycle_id"
+				},
+				{
+					"name": "fee_detail_id"
+				},
+				{
+					"name": "create_type"
+				},
+				{
+					"name": "last_update_date"
+				},
+				{
+					"name": "last_update_time"
+				},
+				{
+					"name": "gather_flag"
+				},
+				{
+					"name": "need_gather"
+				},
+				{
+					"name": "result_code"
+				},
+				{
+					"name": "result_info"
+				},
+				{
+					"name": "tohis_date"
+				},
+				{
+					"name": "channel_serial_no"
+				},
+				{
+					"name": "create_date"
+				},
+				{
+					"name": "fees_base_type"
+				},
+				{
+					"name": "detail_no"
+				}],
+				"range": {
+					"begin": [{
+						"type": "INF_MIN"
+					}],
+					"end": [{
+						"type": "INF_MAX"
+					}]
+				}
+			}
+		
+	},
+		"writer":{
+			"plugin": "odps",
+			"parameter": {
+				"accessId": "d5acUDf6Na5MkpuQ",
+				"*accessKey": "NUTTli5EicRL13hkv65jjgKn7FF6A5",
+				"project": "ydt_dat_hds",
+				"column": [
+				"fee_sn",
+				"fee_id",
+				"fee_name",
+				"fee_type_flag",
+				"serial_no",
+				"fee_category1",
+				"fee_category2",
+				"occur_date",
+				"org_code",
+				"org_name",
+				"user_id",
+				"user_name",
+				"currency",
+				"occur_amount",
+				"standard_fare",
+				"fee_amount",
+				"favorable_amount",
+				"fee_cycle_id",
+				"fee_detail_id",
+				"create_type",
+				"last_update_date",
+				"last_update_time",
+				"gather_flag",
+				"need_gather",
+				"result_code",
+				"result_info",
+				"tohis_date",
+				"channel_serial_no",
+				"create_date",
+				"fees_base_type",
+				"detail_no"
+				],
+				"table": "f_his_ccs_fee_jour",
+				"partition": "dt='ots2odps'",
+				"truncate": "true"
+			}
+		}
+	}
+	
+}

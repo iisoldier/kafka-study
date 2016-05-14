@@ -14,12 +14,6 @@ source $cur_path/config.properties
 	fi
 
 	run_dt=$1
-	exec_dt=$(mysql -N -e "select Min(exec_dt) from dtPara where state=0")
-
-	if [ $run_dt != $exec_dt ];then
-		echo "Error!!!  Please check it out!!!需要执行的日期参数，格式为yyyymmdd"
-		exit 1
-	fi
 
 	[ ! -d run ] && mkdir -p run
 	[ ! -d log/odps ] && mkdir -p log/odps
@@ -31,16 +25,16 @@ source $cur_path/config.properties
 	cp $f_sql_path/*.sql run/
 	cp $json_path/*.json run/
 	
-	sed -i 's/$date_dt/'$run_dt'/g' run/*.sql
-	sed -i 's/$date_dt/'$run_dt'/g' run/*.json
+	sed -i 's#$date_dt#'$run_dt'#g' run/*.sql
+	sed -i 's#$date_dt#'$run_dt'#g' run/*.json
 	
-	sed -i 's/odps_accessId/'$ODPS_accessId'/g' run/*.json
-	sed -i 's/odps_accesskey/'$ODPS_accesskey'/g'run/*.json
-	sed -i 's/odps_project/'$ODPS_project'/g' run/*.json
+	sed -i 's#odps_accessId#'$ODPS_accessId'#g' run/*.json
+	sed -i 's#odps_accesskey#'$ODPS_accesskey'#g'run/*.json
+	sed -i 's#odps_project#'$ODPS_project'#g' run/*.json
 	sed -i 's#ots_endpoint#'$OTS_endpoint'#g' run/*.json
-	sed -i 's/ots_accessId/'$OTS_accessId'/g' run/*.json
-	sed -i 's/ots_accessKey/'$OTS_accessKey'/g' run/*.json
-	sed -i 's/ots_instanceName/'$OTS_instanceName'/g' run/*.json
+	sed -i 's#ots_accessId#'$OTS_accessId'#g' run/*.json
+	sed -i 's#ots_accessKey#'$OTS_accessKey'#g' run/*.json
+	sed -i 's#ots_instanceName#'$OTS_instanceName'#g' run/*.json
 	
 	
 	

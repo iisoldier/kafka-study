@@ -25,3 +25,8 @@ if [ $exist -eq 0 ] ;then
 	insert into dtPara (exec_dt, state,his_ccs_fee_real_union_state,his_ccs_fenrun_jour_state,his_ccs_fee_jour_state,his_ccs_fee_jour_union_state,his_ccs_fee_settle_order_state) values ($next_dt,'0','0','0','0','0','0');	
 EOF
 fi
+
+
+rm run/*
+mv log/odps/*.log log/odps/ok
+mv log/cdp/*.log  log/cdp/ok
