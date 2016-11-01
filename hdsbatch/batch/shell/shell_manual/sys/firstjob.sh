@@ -1,6 +1,6 @@
 #!bin/bash
 
-cur_path="/ztapp/usr/hdsapp/deploy/batch/shell/sys"
+cur_path="/ztapp/usr/hdsapp/deploy/batch/shell_manual/sys"
 base_path="/ztapp/usr/hdsapp/deploy/batch"
 o_sql_path="$base_path/sql/ccs/load_sql"
 f_sql_path="$base_path/sql/ccs/model_sql"

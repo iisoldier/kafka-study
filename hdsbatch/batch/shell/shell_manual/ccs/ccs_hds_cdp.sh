@@ -1,11 +1,11 @@
 #!bin/bash
 now_date=`date +%Y%m%d%H%M%S`
-cur_path="/ztapp/usr/hdsapp/deploy/batch/shell/ccs"
+cur_path="/ztapp/usr/hdsapp/deploy/batch/shell_manual/ccs"
 base_path="/ztapp/usr/hdsapp/deploy/batch"
 date_dt=$1
 ccs_json_path="$base_path/tmp/ccs/$date_dt/json"
 
-source $base_path/shell/sys/hds_env.sh
+source $base_path/shell_manual/sys/hds_env.sh
 
 cat $cur_path/ccs_ots_tablelist.txt |while read line
 do

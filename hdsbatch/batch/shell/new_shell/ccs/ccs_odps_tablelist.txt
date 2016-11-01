@@ -1,5 +1,0 @@
-his_ccs_fee_jour
-his_ccs_fee_jour_detail
-his_ccs_fee_settle_order
-his_ccs_fenrun_jour
-his_ccs_fenrun_jour_real_detail

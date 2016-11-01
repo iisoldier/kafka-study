@@ -1,6 +1,6 @@
 #!bin/bash
 date_dt=`date -d -1day +%Y%m%d`
-cur_path="/ztapp/usr/hdsapp/deploy/batch/shell/sys"
+cur_path="/ztapp/usr/hdsapp/deploy/batch/shell_manual/sys"
 base_path="/ztapp/usr/hdsapp/deploy/batch"
 
 
@@ -14,7 +14,7 @@ transSqlTemplate $base_path/json/sys/hds_log2odps.json  $sys_json_path  hds_log2
 
 
 table_name=hds_log2odps
-source $base_path/shell/sys/hds_env.sh
+source $base_path/shell_manual/sys/hds_env.sh
   
 	echo "开始向表${table_name} 进行cdp任务"
 	if [ ! -f $sys_json_path/${table_name}.json ];then

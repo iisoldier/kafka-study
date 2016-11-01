@@ -1,6 +1,6 @@
 #!bin/bash
 now_date=`date +%Y%m%d%H%M%S`
-cur_path="/ztapp/usr/hdsapp/deploy/batch/shell/sys"
+cur_path="/ztapp/usr/hdsapp/deploy/batch/shell_manual/sys"
 base_path="/ztapp/usr/hdsapp/deploy/batch"
 date_dt=`sh get_exec_dt.sh`
 

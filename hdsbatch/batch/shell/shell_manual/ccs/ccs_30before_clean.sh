@@ -1,11 +1,11 @@
 #bin/bash
 
 
-cur_path="/ztapp/usr/hdsapp/deploy/batch/shell/ccs"
+cur_path="/ztapp/usr/hdsapp/deploy/batch/shell_manual/ccs"
 base_path="/ztapp/usr/hdsapp/deploy/batch"
 date_dt=$1
 clean_dt=`date -d "$date_dt -1 month" +"%Y%m%d"`
-source $base_path/shell/sys/hds_env.sh
+source $base_path/shell_manual/sys/hds_env.sh
 
 
 cat $cur_path/ccs_odps_tablelist.txt |while read line

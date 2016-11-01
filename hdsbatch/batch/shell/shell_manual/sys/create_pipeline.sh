@@ -7,7 +7,7 @@ export cdp_path="/ztapp/usr/hdsapp/deploy/cdp-client/bin"
 export template_path="/ztapp/usr/hdsapp/deploy/cdp-client/template"
 export temp_path="/ztapp/usr/hdsapp/deploy/batch/tmp"
 export pipeline_path="$temp_path/cdp_pipeline"
-export common_sh_path="/ztapp/usr/hdsapp/deploy/batch/shell/sys"
+export common_sh_path="/ztapp/usr/hdsapp/deploy/batch/shell_manual/sys"
 export pipeline_name="hds_test_pipeline"
 
 #Éú³É»º´æÄ¿Â¼
